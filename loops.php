@@ -26,10 +26,32 @@
         BirthYear => 1983
     );
 
+    $volmar = array (
+        Name => "Volmar",
+        Surname => "Machado",
+        Position => "Developer",
+        Age => 27
+    );
+
+    $employees = array ($info, $volmar);
+
     foreach ($info as $value) {
         echo $value . "<br/>";   
     }
 
-    
+
+    foreach ($volmar as $value) {
+        echo $value . "<br/>";   
+    } 
+
+    echo "<br/>";
+
+array_push($employees, array(
+    Name => "Raul",
+    Surname => "Dominguez",
+    Age => 31
+));
+
+    print_r($employees);
 
     
