@@ -34,9 +34,23 @@ class EnglishDeck extends Deck
            $res2 = array_search($oCarta2->getfigure(), $this->cards);
            $res3 = array_search($oCarta3->getfigure(), $this->cards);
            $res4 = array_search($oCarta4->getfigure(), $this->cards);
+
+ 
+                if($res1 == 9 || $res1 == 10 || $res1 == 11 || $res1 == 12) {
+                    $res1 = 9;
+                }
+                if($res2 == 9 || $res2 == 10 || $res2 == 11 || $res2 == 12) {
+                    $res2 = 9;
+                }
+                if($res3 == 9 || $res3 == 10 || $res3 == 11 || $res3 == 12) {
+                    $res3 = 9;
+                }
+                if($res4 == 9 || $res4 == 10 || $res4 == 11 || $res4 == 12) {
+                    $res4 = 9;
+                }
     
-            $play1 = $res1 + $res2;
-            $play2 = $res3 + $res4;
+            $play1 = ($res1 + 1) + ($res2 +1);
+            $play2 = ($res3 + 1) + ($res4 +1);
         
         echo "<br/><br/>";
         echo "<br/>Player 1: " . $play1;
