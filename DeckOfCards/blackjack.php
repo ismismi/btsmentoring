@@ -48,13 +48,34 @@ class EnglishDeck extends Deck
                 if($res4 == 9 || $res4 == 10 || $res4 == 11 || $res4 == 12) {
                     $res4 = 9;
                 }
+                if($res1 == 0) {
+                    $res1 = 10;
+                }
+                if($res2 == 0) {
+                    $res2 = 10;
+                }
+                if($res3 == 0) {
+                    $res3 = 10;
+                } 
+                if($res4 == 0) {
+                    $res4 = 10;
+                }
+                if($res1 == 10 && $res2 == 10) {
+                    $res2 = 0;
+                }  
+                if($res3 == 10 && $res4 == 10) {
+                    $res4 = 0;
+                }            
     
             $play1 = ($res1 + 1) + ($res2 +1);
             $play2 = ($res3 + 1) + ($res4 +1);
+
+
+
         
         echo "<br/><br/>";
         echo "<br/>Player 1: " . $play1;
-        echo "<br/>Player 1: " . $play2;
+        echo "<br/>Player 2: " . $play2;
         
         echo "<br/><br/>";
         
